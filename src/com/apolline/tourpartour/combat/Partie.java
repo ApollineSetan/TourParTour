@@ -51,14 +51,14 @@ public class Partie {
             joueur1.attaquer(joueur2);
             if (joueur2.getVie() <=0){
                 System.out.println(joueur1.getNom() + " a gagné!");
-                return;
+                break;
             }
 
             //Joueur 2 attaque joueur 1
-            joueur2.attaquer(joueur2);
+            joueur2.attaquer(joueur1);
             if (joueur1.getVie() <= 0){
                 System.out.println(joueur2.getNom() + " a gagné!");
-                return;
+                break;
             }
 
             //Décrémenter le nombre de tours
@@ -66,7 +66,7 @@ public class Partie {
         }
 
         // Conditions pour déterminer une victoire ou une égalité
-        if (joueur1.getVie() > 0 && joueur2.getVie() > 0){
+        if (joueur1.getVie() == joueur2.getVie()){
             System.out.println("Match nul!");
         } else if (joueur1.getVie() > 0){
             System.out.println("Le joueur " + joueur1.getNom() + " a gagné!");
