@@ -32,7 +32,7 @@ public class Guerrier extends Personnage{
         // Si le coup critique est réussi, il s'ajoute aux points de vie
         if (coupCritique){
             this.setVie(this.getVie() + bonusDefense);
-            System.out.println("Coup défensif ! " + this.getNom() + " gagne " + bonusDefense + " points de vie!");
+            System.out.println("Coup défensif ! " + this.getNom() + " gagne " + bonusDefense + " points de vie supplémentaires!");
         }
 
         int degats = this.getAttaque() - cible.getDefense();

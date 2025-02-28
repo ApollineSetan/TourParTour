@@ -50,14 +50,14 @@ public class Partie {
             //Joueur 1 attaque joueur 2
             joueur1.attaquer(joueur2);
             if (joueur2.getVie() <=0){
-                System.out.println(joueur1.getNom() + " a gagné!");
+                System.out.println("C'est un coup critique!");
                 break;
             }
 
             //Joueur 2 attaque joueur 1
             joueur2.attaquer(joueur1);
             if (joueur1.getVie() <= 0){
-                System.out.println(joueur2.getNom() + " a gagné!");
+                System.out.println("C'est un coup critique!");
                 break;
             }
 
