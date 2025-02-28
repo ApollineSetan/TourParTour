@@ -1,0 +1,42 @@
+Exercice 1 :
+
+1 Créer une classe Personnage qui va contenir les éléments suivants :
+4 Attributs (nom de type String, vie de type int, attaque de type int, defense de type int) en private,
+2 constructeurs (un vide et un avec les 4 paramètres),
+les getters et setters (pour chaque attributs),
+1 méthode attaquer, qui prend une cible en paramètre (objet Personnage) et soustrait à la vie de la cible la valeur d’attaque courante moins la defense de la cible.
+Exemple : le perso attaque (5 pts) la cible (20 de vie et 3 de défense) => 20 – (5-3) -> reste 18 points de vie.
+
+
+2 Créer une classe Assassin qui va hériter de Personnage et qui va contenir en plus :
+Attribut (bonusAttaque de type int) en private,
+1 constructeur (4 attributs de Personnage en utilisant super et bonusAttaque),
+Getter et setter de chaque attribut,
+Redéfinir la méthode attaquer en ajoutant une chance de coup critique (attaque + bonusAttaque) avec 5 % de chance (5 fois sur 100),
+
+
+3 Créer une classe Guerrier qui va hériter de Personnage et qui va contenir en plus :
+Attribut (bonusDefense de type int) private,
+1 constructeur (4 attributs de Personnage en utilisant super et bonusDefense),
+Getter et setter de chaque attribut,
+Redéfinir la méthode attaquer en ajoutant une chance de coup critique (bonusDefense) avec 5 % de chance (5 fois sur 100) d’ajouter la valeur de son bonusDefense à ces points de vie,
+
+
+4 Créer une classe Partie qui va contenir :
+Attributs (joueur1 de type Personnage, Joueur2 de type Personnage, nbrTour de type int)
+Getter et setter de chaque attribut,
+Un constructeur qui va prendre en entrée les 3 attributs,
+Une méthode lancerPartie qui va effectuer le traitement suivant :
+répéter les actions suivantes à chaque tour (tant que nbrTour est plus grand que 0):
+Lancer l’attaque du j1 -> j2,
+Lancer l’attaque du j2 -> j1,
+Décrémenter le nbrTour (-1 à chaque tour),
+Tester si le joueur 1 a gagné (arrête la partie),
+Tester si le joueur 2 a gagné (arrête la partie),
+Condition de victoire :
+A l’issu du nbr de tour si le joueur 1 à ces points de vie à 0 ou moins le joueur 2 gagne,
+A l’issu du nbr de tour si le joueur 2 à ces points de vie à 0 ou moins le joueur 1 gagne,
+Condition d’égalité :
+Si à la fin du nombre de tour les 2 joueurs ont leurs points de vie respectifs supérieurs à 0, il y à égalité.
+Affiche en sortie au format String :
+Le gagnant avec son nom, ou égalité.
